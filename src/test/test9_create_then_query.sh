@@ -10,6 +10,7 @@ curl -s -X POST $BASE_URL/order \
 
 tmp="$(mktemp)"
 status=$(curl -s -o "$tmp" -w "%{http_code}" $BASE_URL/order/1002)
+status=$(curl -s -o "$tmp" -w "%{http_code}" $BASE_URL/order/1003)
 body="$(cat "$tmp")"
 rm -f "$tmp"
 
